@@ -19,7 +19,7 @@ public class APIDBUtil {
 		prop.setProperty("dbaccount", "chmurga");
 		prop.setProperty("dbuser", "chmurga");
 		prop.setProperty("dbpassword", "lamurga");
-		prop.setProperty("database", "expert_presenter");
+		prop.setProperty("database", "rest_application");
 //		try {
 //			File configFile = new File("config.properties");//("config.properties");
 //			logger.info("file found..!!!!..  "+configFile.getAbsoluteFile());
