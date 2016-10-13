@@ -29,10 +29,20 @@ public class UserBo {
 	}
 
 	
-/*	public List<JSONObject> getUsrById(int id) {
+	public JSONObject getUsrById(String id) {
+
 		presentationsView = new ArrayList<JSONObject>();
 		presentationsView = db.view("users/all").query(JSONObject.class);
+		for (JSONObject jsonObject : presentationsView) {
+			JSONObject object = (JSONObject) JSONValue.parse(JSONValue.toJSONString(jsonObject.get("value")));
+			String idToCompare = (String) object.get("_id");
+			if(id.equals(idToCompare)){
+				return object;
+			}			
+		}
 		return null;
+		
 	}
-*/
+	
+
 }

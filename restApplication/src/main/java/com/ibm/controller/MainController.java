@@ -28,15 +28,15 @@ public class MainController {
 	@RequestMapping(value = "/users/", method = RequestMethod.GET)
 	public List<JSONObject> getAllUsers(){
 		usrBO = new UserBo();
-		List<JSONObject> jo = usrBO.getAllUsers();
-		return jo;
+		List<JSONObject> listaUsr = usrBO.getAllUsers();
+		return listaUsr;
 	}
-/*	@RequestMapping(value ="/users/{id}",method = RequestMethod.GET)
-	public List<JSONObject> getUserByid(@PathVariable int id){
-		usrBO = new UserBo();
-	//	List<JSONObject> jo = usrBO.getUsrById(id);
-		return null;
+	@RequestMapping(value ="/users/{id}",method = RequestMethod.GET)
+	public JSONObject getUserByid(@PathVariable String id){
+		usrBO = new UserBo();	
+		JSONObject usr = usrBO.getUsrById(id);
+		return usr;
 		
 	}
-*/
+	
 }
