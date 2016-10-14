@@ -43,6 +43,13 @@ public class UserBo {
 		return null;
 		
 	}
+
+// me falta..=)
+	public User saveUsrById(User usr) {
+		db.save(usr);
+		return usr;
+		
+	}
 	
 
 }
